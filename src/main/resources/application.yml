@@ -1,0 +1,5 @@
+endpoints:
+  restart:
+    enabled: true
+server:
+  port: 8098
