@@ -13,6 +13,6 @@ public class KafkaProducerService {
     private final KafkaTemplate<String, Order> kafkaTemplate;
 
     public void sendOrder(Order order) {
-        kafkaTemplate.send(TOPIC, order);
+        kafkaTemplate.send(TOPIC, order.getId().toString(), order);
     }
 }
