@@ -1,4 +1,4 @@
-package com.amcom.purchaseorder.application;
+package com.amcom.purchaseorder.controller;
 
 import com.amcom.purchaseorder.service.OrderService;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.amcom.purchaseorder.config;
+package com.amcom.purchaseorder.infrastructure;
 
 import com.amcom.purchaseorder.domain.Order;
 import org.apache.kafka.clients.producer.ProducerConfig;

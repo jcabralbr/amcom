@@ -1,2 +1,2 @@
 # amcom
-Projeto do teste da AMCOM
+Projeto de teste da AMCOM
