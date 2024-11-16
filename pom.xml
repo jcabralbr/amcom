@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>br.com.empresa</groupId>
-    <artifactId>produce-order</artifactId>
+    <artifactId>purchase-order</artifactId>
     <version>1.0.0</version>
     <name>produce-order</name>
     <description>Projeto para produzir pedidos de compra para enviar para o kafka</description>
@@ -26,18 +26,6 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-core</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.module</groupId>-->
-<!--            <artifactId>jackson-module-afterburner</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
