@@ -1,4 +1,4 @@
-package com.amcom.purchaseorder.domain;
+package com.amcom.order.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Builder;
@@ -11,9 +11,5 @@ import java.util.List;
 @Getter
 @Setter
 @JsonSerialize
-public class Order {
-    private Long id;
-
-    private List<OrderItem> items;
-
+public record OrderDTO(String orderId, List<OrderItemDTO> items) {
 }

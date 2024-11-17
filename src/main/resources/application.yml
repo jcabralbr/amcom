@@ -3,3 +3,7 @@ endpoints:
     enabled: true
 server:
   port: 8098
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic: purchase_order

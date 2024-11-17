@@ -1,7 +1,7 @@
-package com.amcom.purchaseorder.service;
+package com.amcom.order.service;
 
-import com.amcom.purchaseorder.domain.Order;
-import com.amcom.purchaseorder.domain.OrderItem;
+import com.amcom.order.dto.OrderDTO;
+import com.amcom.order.dto.OrderItemDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,28 +19,28 @@ public class OrderService {
     private final Random random = new Random();
 
     public void createAndSendOrder() {
-        Order order = generateOrder();
-        kafkaProducerService.sendOrder(order);
+        OrderDTO orderDTO = generateOrder();
+        kafkaProducerService.sendOrder(orderDTO);
     }
 
-    private Order generateOrder() {
-        Long orderId = Math.abs(random.nextLong(10) + 1); // gera um numero aleatorio 1 e 10
-        List<OrderItem> items = new ArrayList<>();
+    private OrderDTO generateOrder() {
+        long orderId = Math.abs(random.nextLong(10) + 1); // gera um numero aleatorio 1 e 10
+        List<OrderItemDTO> items = new ArrayList<>();
         int numberOfItems = random.nextInt(5) + 1; // gera um numero aleatorio entre 1 e 5
 
         for (int i = 0; i < numberOfItems; i++) {
             String sku = "SKU-" + random.nextInt(1000);
             int quantity = random.nextInt(10) + 1;
             BigDecimal unitPrice = BigDecimal.valueOf(random.nextDouble() * 100).setScale(2, RoundingMode.HALF_UP);
-            items.add(OrderItem.builder()
+            items.add(OrderItemDTO.builder()
                     .sku(sku)
                     .quantity(quantity)
                     .unitPrice(unitPrice)
                     .build());
         }
 
-        return Order.builder()
-                .id(orderId)
+        return OrderDTO.builder()
+                .orderId(Long.toString(orderId))
                 .items(items)
                 .build();
 

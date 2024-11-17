@@ -1,4 +1,4 @@
-package com.amcom.purchaseorder.domain;
+package com.amcom.order.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Builder;
@@ -11,11 +11,5 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @JsonSerialize
-public class OrderItem {
-
-    private String sku;
-
-    private int quantity;
-
-    private BigDecimal unitPrice;
+public record OrderItemDTO(String sku, int quantity, BigDecimal unitPrice) {
 }

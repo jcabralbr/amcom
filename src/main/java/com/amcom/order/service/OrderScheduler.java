@@ -1,4 +1,4 @@
-package com.amcom.purchaseorder.service;
+package com.amcom.order.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;

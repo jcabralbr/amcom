@@ -1,13 +1,13 @@
-package com.amcom.purchaseorder;
+package com.amcom.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
-@SpringBootApplication(scanBasePackages = "com.amcom.purchaseorder")
-public class PurchaseOrderApplication {
+@SpringBootApplication(scanBasePackages = "com.amcom.order")
+public class OrderProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PurchaseOrderApplication.class, args);
+        SpringApplication.run(OrderProducerApplication.class, args);
     }
 }

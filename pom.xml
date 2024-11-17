@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
 
-    <groupId>br.com.empresa</groupId>
-    <artifactId>purchase-order</artifactId>
+    <groupId>com.amcom</groupId>
+    <artifactId>order-producer</artifactId>
     <version>1.0.0</version>
-    <name>produce-order</name>
+    <name>order-producer</name>
     <description>Projeto para produzir pedidos de compra para enviar para o kafka</description>
     <properties>
         <java.version>21</java.version>
