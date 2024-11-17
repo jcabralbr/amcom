@@ -24,7 +24,7 @@ public class OrderService {
     }
 
     private OrderDTO generateOrder() {
-        long orderId = Math.abs(random.nextLong(10) + 1); // gera um numero aleatorio 1 e 10
+        long orderId = Math.abs(random.nextLong(100000) + 1); // gera um numero aleatorio 1 e 10
         List<OrderItemDTO> items = new ArrayList<>();
         int numberOfItems = random.nextInt(5) + 1; // gera um numero aleatorio entre 1 e 5
 
@@ -35,7 +35,7 @@ public class OrderService {
             items.add(OrderItemDTO.builder()
                     .sku(sku)
                     .quantity(quantity)
-                    .unitPrice(unitPrice)
+                    .unitPrice(unitPrice.doubleValue())
                     .build());
         }
 
