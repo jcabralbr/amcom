@@ -30,6 +30,8 @@
 /nbdist/
 /.nb-gradle/
 /build/
+/mysql-init/
+/mysql_volume_data/
 
 ### VS Code ###
 .vscode/
